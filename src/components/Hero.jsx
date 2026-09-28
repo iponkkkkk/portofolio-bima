@@ -8,7 +8,7 @@ const Hero = () => {
   useEffect(() => {
     const typingSpeed = 150; 
     const deletingSpeed = 100; 
-    const pauseBeforeDelete = 1500; 
+    const pauseBeforeDelete = 2000; // Ditambah sedikit agar nama sempat terbaca jelas saat utuh
     const pauseBeforeRestart = 500; 
 
     let timer;
@@ -40,15 +40,16 @@ const Hero = () => {
         
         {/* Kiri: Teks Profil */}
         <div className="space-y-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight whitespace-nowrap overflow-hidden">
+          {/* whitespace-nowrap & overflow-hidden dihapus agar teks nama tidak terpotong di layar */}
+          <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight">
             Hi, I'm <span className="text-cyan-400">{displayedText}</span>
-            <span className="text-cyan-400 animate-pulse">|</span>
+            <span className="text-cyan-400 animate-pulse ml-1">|</span>
           </h1>
           
           <div>
             <h2 className="text-xl md:text-2xl font-semibold text-cyan-300 tracking-widest uppercase">
-  QA Engineer (Manual & Automation) & Product Quality Analyst
-</h2>
+              QA Engineer (Manual & Automation) & Product Quality Analyst
+            </h2>
             <p className="text-sm text-slate-400 flex items-center mt-2 font-medium">
               📍Surabaya, East Java, Indonesia
             </p>
@@ -63,27 +64,23 @@ Passionate about Quality Engineering, Test Automation, and Continuous Improvemen
           </p>
 
           <div className="text-xs text-cyan-400/80 font-medium tracking-wide pt-4">
-             Consumer Electronics | Mobile Apps | E-Commerce | Healthcare & Pharma | GovTech & AI-Powered Intelligence Systems | Enterprise Datahub
+            Consumer Electronics | Mobile Apps | E-Commerce | Healthcare & Pharma | GovTech & AI-Powered Intelligence Systems | Enterprise Datahub
           </div>
         </div>
 
-        {/* Kanan: Foto Profil dengan Border Gradasi Oranye seperti Banner & Badge Status */}
+        {/* Kanan: Foto Profil dengan Border Gradasi Oranye & Badge Status */}
         <div className="flex flex-col items-center justify-center space-y-5 mt-8 md:mt-0">
-          
-          {/* Frame Foto ditambahkan ring gradasi oranye sesuai gambar referensi */}
           <div className="p-1.5 bg-gradient-to-tr from-amber-500 to-orange-400 rounded-full shadow-lg shadow-orange-500/20">
             <div className="w-56 h-56 md:w-80 md:h-80 shrink-0 bg-slate-800 rounded-full overflow-hidden border-4 border-[#0B132B]">
                <img src="/fotobima.jpg" alt="Bima Profile" className="w-full h-full object-cover" />
             </div>
           </div>
           
-          {/* Badge Status Cyan Dark */}
           <div className="flex items-center space-x-2 bg-slate-900/90 px-5 py-2.5 rounded-full border border-cyan-500/30 text-center shadow-lg shadow-cyan-500/5">
             <span className="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-pulse shrink-0"></span>
             <span className="text-cyan-300 text-xs md:text-sm font-medium">Open to QA, SDET & Automation opportunities</span>
           </div>
 
-          {/* Tombol Contact Me */}
           <a href="#contact" className="px-8 py-2 border border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400 hover:text-slate-900 transition text-sm shadow-md shadow-cyan-400/10">
             contact me
           </a>
