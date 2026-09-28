@@ -41,7 +41,7 @@ const Hero = () => {
         {/* Kiri: Teks Profil */}
         <div className="space-y-6">
           {/* whitespace-nowrap & overflow-hidden dihapus agar teks nama tidak terpotong di layar */}
-          <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+          <h1 className="text-2xl md:text-3xl font-bold text-white leading-tight">
             Hi, I'm <span className="text-cyan-400">{displayedText}</span>
             <span className="text-cyan-400 animate-pulse ml-1">|</span>
           </h1>
