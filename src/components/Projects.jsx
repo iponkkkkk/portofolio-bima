@@ -8,7 +8,7 @@ const Projects = () => {
       date: "QA Testing Project",
       description: "Performed comprehensive manual and automated testing for Samsung Web and Mobile applications. Responsible for functional, UI/UX, and cross-platform compatibility testing across various devices and screen resolutions.",
       tech: ["Website Testing", "Mobile Testing"],
-      image: "/samsungapp.jpg"
+      image: "/samsung.png"
     },
     {
       id: 2,
