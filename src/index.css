@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tambahan agar scroll antar menu terasa halus */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Menyembunyikan scrollbar tapi tetap bisa digeser (untuk tampilan mobile) */
+.hide-scrollbar::-webkit-scrollbar { 
+  display: none; 
+}
+.hide-scrollbar { 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
